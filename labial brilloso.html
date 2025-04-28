@@ -131,28 +131,28 @@
 
   <section class="products" id="labial-brilloso">
     <div class="product">
-      <img src="C:\Users\lizga\OneDrive\Documentos\Modulo 4\PAGINAS WEB\MI PAGINA\LABIAL BRILLOSO ROSA.jpeg" alt="Labial Brilloso Rosa">
+      <img src="jpeg\LABIAL BRILLOSO ROSA.jpeg" alt="Labial Brilloso Rosa">
       <h3>Labial Brilloso Rosa</h3>
 	   <p> $240 <p>
-      <form onsubmit="mostrarAlerta(event)">
+      <form onSubmit="mostrarAlerta(event)">
         <input type="number" min="1" value="1">
         <button type="submit">Comprar</button>
       </form>
     </div>
     <div class="product">
-      <img src="C:\Users\lizga\OneDrive\Documentos\Modulo 4\PAGINAS WEB\MI PAGINA\LABIAL BRILLOSO DORADO.jpeg" alt="Labial Brilloso Dorado">
+      <img src="jpeg\LABIAL BRILLOSO DORADO.jpeg" alt="Labial Brilloso Dorado">
       <h3>Labial Brilloso Dorado</h3>
 	   <p> $260 <p>
-      <form onsubmit="mostrarAlerta(event)">
+      <form onSubmit="mostrarAlerta(event)">
         <input type="number" min="1" value="1">
         <button type="submit">Comprar</button>
       </form>
     </div>
     <div class="product">
-      <img src="C:\Users\lizga\OneDrive\Documentos\Modulo 4\PAGINAS WEB\MI PAGINA\LABIAL BRILLOSO TRANSPARENTE.jpeg" alt="Labial Brilloso Transparente">
+      <img src="jpeg\LABIAL BRILLOSO TRANSPARENTE.jpeg" alt="Labial Brilloso Transparente">
       <h3>Labial Brilloso Transparente</h3>
 	   <p> $230 <p>
-      <form onsubmit="mostrarAlerta(event)">
+      <form onSubmit="mostrarAlerta(event)">
         <input type="number" min="1" value="1">
         <button type="submit">Comprar</button>
       </form>
@@ -169,11 +169,11 @@
   <script>
     function mostrarAlerta(event) {
       event.preventDefault();
-      alert("¡Compra exitosa! Gracias por tu pedido.");
+      alert("ï¿½Compra exitosa! Gracias por tu pedido.");
     }
 	
   <audio id="audio-fondo" loop>
-    <source src="C:\\Users\\lizga\\OneDrive\\Documentos\\Modulo 4\\PAGINAS WEB\\MI PAGINA\\PILATES.mp3" type="audio/mpeg">
+    <source src="jpeg\PILATES.mp3" type="audio/mpeg">
   </audio>
 
   <button onclick="toggleAudio()" id="btn-audio" style="
@@ -190,7 +190,7 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     z-index: 1000;
   ">
-?? Reproducir Música
+?? Reproducir Mï¿½sica
 </button>
 
 <script>
@@ -204,17 +204,17 @@
     if (!iniciado) {
       audio.play();
       iniciado = true;
-      btn.innerText = "?? Pausar Música";
+      btn.innerText = "?? Pausar Mï¿½sica";
     }
   });
 
   function toggleAudio() {
     if (audio.paused) {
       audio.play();
-      btn.innerText = "?? Pausar Música";
+      btn.innerText = "?? Pausar Mï¿½sica";
     } else {
       audio.pause();
-      btn.innerText = "?? Reproducir Música";
+      btn.innerText = "?? Reproducir Mï¿½sica";
     }
   }
 </script>
