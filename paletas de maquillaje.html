@@ -127,17 +127,17 @@
 
   <section class="products" id="paletas">
     <div class="product">
-      <img src="C:\Users\lizga\OneDrive\Documentos\Modulo 4\PAGINAS WEB\MI PAGINA\PALETA NUDEE.jpeg" alt="Paleta Nude">
+      <img src="jpeg\PALETA NUDEE.jpeg" alt="Paleta Nude">
       <h3>Paleta Nude</h3>
       <button><a href="Paleta Nude.html" target="_parent">Ver mas</a></button>
     </div>
     <div class="product">
-      <img src="C:\Users\lizga\OneDrive\Documentos\Modulo 4\PAGINAS WEB\MI PAGINA\PALETA COLORIDAA.jpeg" alt="Paleta Colorida">
+      <img src="jpeg\PALETA COLORIDAA.jpeg" alt="Paleta Colorida">
       <h3>Paleta Colorida</h3>
       <button><a href="Paleta Colorida.html" target="_parent">Ver mas</a></button>
     </div>
     <div class="product">
-      <img src="C:\Users\lizga\OneDrive\Documentos\Modulo 4\PAGINAS WEB\MI PAGINA\PALETA GLAAM.jpeg" alt="Paleta Glam">
+      <img src="jpeg\PALETA GLAAM.jpeg" alt="Paleta Glam">
       <h3>Paleta Glam</h3>
       <button><a href="Paleta Glam.html" target="_parent">Ver mas</a></button>
     </div>
@@ -155,7 +155,7 @@
   <source src="C:\Users\lizga\OneDrive\Documentos\Modulo 4\PAGINAS WEB\MI PAGINA\PILATES.mp3" type="audio/mpeg">
 </audio>
 
-<button onclick="toggleAudio()" id="btn-audio" style="
+<button onClick="toggleAudio()" id="btn-audio" style="
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -197,6 +197,56 @@
     }
   }
 </script>
+  
+  
+<audio id="audio-fondo" loop>
+  <source src="jpeg\PILATES.mp3" type="audio/mpeg">
+</audio>
+
+<button onClick="toggleAudio()" id="btn-audio" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #9b4d96;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+">
+Reproducir Musica
+</button>
+
+<script>
+  const audio = document.getElementById("audio-fondo");
+  const btn = document.getElementById("btn-audio");
+
+  audio.volume = 0.1;
+  let iniciado = false;
+
+  document.addEventListener("click", function () {
+    if (!iniciado) {
+      audio.play();
+      iniciado = true;
+      btn.innerText = " Pausar Musica";
+    }
+  });
+
+  function toggleAudio() {
+    if (audio.paused) {
+      audio.play();
+      btn.innerText = " mutear Musica";
+    } else {
+      audio.pause();
+      btn.innerText = " Reproducir Musica";
+    }
+  }
+
+</script>
+
 
 </body>
 </html>
