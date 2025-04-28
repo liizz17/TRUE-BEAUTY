@@ -191,5 +191,57 @@
       alert("�Compra exitosa! Gracias por tu pedido.");
     }
   </script>
+    
+  
+<audio id="audio-fondo" loop>
+  <source src="jpeg\PILATES.mp3" type="audio/mpeg">
+</audio>
+
+<button onClick="toggleAudio()" id="btn-audio" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #9b4d96;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+">
+Reproducir Musica
+</button>
+
+<script>
+  const audio = document.getElementById("audio-fondo");
+  const btn = document.getElementById("btn-audio");
+
+  audio.volume = 0.1;
+  let iniciado = false;
+
+  document.addEventListener("click", function () {
+    if (!iniciado) {
+      audio.play();
+      iniciado = true;
+      btn.innerText = " Pausar Musica";
+    }
+  });
+
+  function toggleAudio() {
+    if (audio.paused) {
+      audio.play();
+      btn.innerText = " mutear Musica";
+    } else {
+      audio.pause();
+      btn.innerText = " Reproducir Musica";
+    }
+  }
+    function mostrarAlerta(event) {
+      event.preventDefault();
+      alert("Compra exitosa! Gracias por tu pedido! Que tenga un lindo dia!");
+    }
+</script>
 </body>
 </html>

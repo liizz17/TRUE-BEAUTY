@@ -131,40 +131,40 @@
 
   <section class="products" id="ofertas">
     <div class="product">
-      <img src="C:\Users\lizga\OneDrive\Documentos\Modulo 4\PAGINAS WEB\MI PAGINA\BASE LIQUIDA MATTE.jpeg" alt="Base Líquida Mate">
+      <img src="jpeg\BASE LIQUIDA MATTE.jpeg" alt="Base Lï¿½quida Mate">
       <h3>Base Liquida Mate</h3>
       <p>$250 > $175</p>
-      <button onclick="abrirModal('Base Líquida Mate', '$175')">Comprar</button>
+      <button onClick="abrirModal('Base Lï¿½quida Mate', '$175')">Comprar</button>
     </div>
     <div class="product">
-      <img src="C:\Users\lizga\OneDrive\Documentos\Modulo 4\PAGINAS WEB\MI PAGINA\MASCARA VOLUMEN.jpeg" alt="Máscara Volumen">
+      <img src="jpeg\MASCARA VOLUMEN.jpeg" alt="Mï¿½scara Volumen">
       <h3>Mascara Volumen</h3>
       <p>$180 > $130</p>
-      <button onclick="abrirModal('Máscara Volumen', '$130')">Comprar</button>
+      <button onClick="abrirModal('Mï¿½scara Volumen', '$130')">Comprar</button>
     </div>
     <div class="product">
-      <img src="C:\Users\lizga\OneDrive\Documentos\Modulo 4\PAGINAS WEB\MI PAGINA\PALETA DE SOMBRAS NUDE.jpeg" alt="Paleta Sombras Nude">
+      <img src="jpeg\PALETA DE SOMBRAS NUDE.jpeg" alt="Paleta Sombras Nude">
       <h3>Paleta Sombras Nude</h3>
       <p>$350 > $260</p>
-      <button onclick="abrirModal('Paleta Sombras Nude', '$260')">Comprar</button>
+      <button onClick="abrirModal('Paleta Sombras Nude', '$260')">Comprar</button>
     </div>
     <div class="product">
-      <img src="C:\Users\lizga\OneDrive\Documentos\Modulo 4\PAGINAS WEB\MI PAGINA\RUBOR ROSADO.jpeg" alt="Rubor Rosado">
+      <img src="jpeg\RUBOR ROSADO.jpeg" alt="Rubor Rosado">
       <h3>Rubor Rosado</h3>
       <p>$150 > $99</p>
-      <button onclick="abrirModal('Rubor Rosado', '$99')">Comprar</button>
+      <button onClick="abrirModal('Rubor Rosado', '$99')">Comprar</button>
     </div>
   </section>
 
   <!-- Ventana modal -->
   <div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); align-items:center; justify-content:center; z-index:1000;">
     <div style="background:white; padding:30px; border-radius:20px; width:300px; text-align:center; position:relative;">
-      <span onclick="cerrarModal()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-weight:bold;">x</span>
+      <span onClick="cerrarModal()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-weight:bold;">x</span>
       <h3 id="modal-producto" style="color:#7a2f72;">Producto</h3>
       <p id="modal-precio" style="color:#d2348c;">Precio</p>
       <input id="nombre" type="text" placeholder="Tu nombre" style="width:90%; padding:10px; margin:10px 0; border-radius:10px; border:1px solid #ccc;">
       <input id="correo" type="email" placeholder="Tu correo" style="width:90%; padding:10px; margin-bottom:15px; border-radius:10px; border:1px solid #ccc;">
-      <button onclick="confirmarCompra()" style="background-color:#9b4d96; color:#fff; padding:10px 20px; border:none; border-radius:20px; font-weight:bold; cursor:pointer;">Confirmar compra</button>
+      <button onClick="confirmarCompra()" style="background-color:#9b4d96; color:#fff; padding:10px 20px; border:none; border-radius:20px; font-weight:bold; cursor:pointer;">Confirmar compra</button>
       <p id="mensaje-exito" style="color:green; margin-top:15px; display:none;">Compra realizada con exito! </p>
     </div>
   </div>
@@ -204,10 +204,10 @@
   
   
 <audio id="audio-fondo" loop>
-  <source src="C:\Users\lizga\OneDrive\Documentos\Modulo 4\PAGINAS WEB\MI PAGINA\PILATES.mp3" type="audio/mpeg">
+  <source src="jpeg\PILATES.mp3" type="audio/mpeg">
 </audio>
 
-<button onclick="toggleAudio()" id="btn-audio" style="
+<button onClick="toggleAudio()" id="btn-audio" style="
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -221,7 +221,7 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   z-index: 1000;
 ">
-?? Reproducir Música
+Reproducir Musica
 </button>
 
 <script>
@@ -235,19 +235,23 @@
     if (!iniciado) {
       audio.play();
       iniciado = true;
-      btn.innerText = "?? Pausar Música";
+      btn.innerText = " Pausar Musica";
     }
   });
 
   function toggleAudio() {
     if (audio.paused) {
       audio.play();
-      btn.innerText = "?? Pausar Música";
+      btn.innerText = " mutear Musica";
     } else {
       audio.pause();
-      btn.innerText = "?? Reproducir Música";
+      btn.innerText = " Reproducir Musica";
     }
   }
+    function mostrarAlerta(event) {
+      event.preventDefault();
+      alert("Compra exitosa! Gracias por tu pedido! Que tenga un lindo dia!");
+    }
 </script>
 
 </body>
